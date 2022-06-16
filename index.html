@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="asset/css/style.css">
+        <!-- tailwind cdn -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font-awesome -->
+        <script src="https://kit.fontawesome.com/9beae211b7.js" crossorigin="anonymous"></script>
+    </head>
+
+    <!-- background-color gradient -->
+    <body class="bg-gradient-to-r from-zinc-600 to-gray-400 h-screen overscroll-none">
+
+        <!-- pokedex title -->
+        <div class="title-section ">
+            <h1 class="text-center text-4xl mt-5 sm:text-5xl">Pokedex</h1>
+        </div>
+
+        <!-- searchbar && submit/filter btns -->
+        <section class="search-section flex justify-center mt-4 mb-6">
+            <input type="text" placeholder="Search for Pokemon" class="mr-2 pl-1 sm:py-2 sm:px-4 sm:text-3xl" id="search-input">
+            <button type="submit" id="search-btn" class="mr-2"><i class="fas fa-search sm:text-lg hover:text-xl"></i></button>
+            <button type="submit" id="filter-btn"><i class="fas fa-filter sm:text-lg hover:text-xl"></i></button>
+            <div class="rounded bg-white w-6/12 h-2/6 m-6 pl-2 left-2/4 overflow-scroll absolute hidden sm:left-2/4 w-3/12" id="filterBox">
+                <input type="checkbox" id="Grass" name="Grass" value="Grass">
+                <label for="Grass"> Grass</label><br>
+                <input type="checkbox" id="Normal" name="Normal" value="Normal">
+                <label for="Normal"> Normal</label><br>
+                <input type="checkbox" id="Fire" name="Fire" value="Fire">
+                <label for="Fire"> Fire</label><br>
+                <input type="checkbox" id="Water" name="Water" value="Water">
+                <label for="Water"> Water</label><br>
+                <input type="checkbox" id="Electric" name="Electric" value="Electric">
+                <label for="Electric"> Electric</label><br>
+                <input type="checkbox" id="Ice" name="Ice" value="Ice">
+                <label for="Ice"> Ice</label><br>
+                <input type="checkbox" id="fighting" name="fighting" value="Fighting">
+                <label for="fighting"> Fighting</label><br>
+                <input type="checkbox" id="Poison" name="Poison" value="Poison">
+                <label for="Poison"> Poison</label><br>
+                <input type="checkbox" id="Ground" name="Ground" value="Ground">
+                <label for="Ground"> Ground</label><br>
+                <input type="checkbox" id="Flying" name="Flying" value="Flying">
+                <label for="Flying"> Flying</label><br>
+                <input type="checkbox" id="Psychic" name="Psychic" value="Psychic">
+                <label for="Psychic"> Psychic</label><br>
+                <input type="checkbox" id="Bug" name="Bug" value="Bug">
+                <label for="Bug"> Bug</label><br>
+                <input type="checkbox" id="Rock" name="Rock" value="Rock">
+                <label for="Rock"> Rock</label><br>
+                <input type="checkbox" id="Ghost" name="Ghost" value="Ghost">
+                <label for="Ghost"> Ghost</label><br>
+                <input type="checkbox" id="Dark" name="Dark" value="Dark">
+                <label for="Dark"> Dark</label><br>
+                <input type="checkbox" id="Dragon" name="Dragon" value="Dragon">
+                <label for="Dragon"> Dragon</label><br>
+                <input type="checkbox" id="Steel" name="Steel" value="Steel">
+                <label for="Steel"> Steel</label><br>
+                <input type="checkbox" id="Fairy" name="Fairy" value="Fairy">
+                <label for="Fairy"> Fairy</label><br>
+            </div>
+        </section>
+
+        <!-- popup div, used to display pokemon information -->
+        <div id='pokemon-popup' class="rounded bg-gradient-to-r from-zinc-500 to-gray-500 z-10 w-10/12 h-3/6 m-7 absolute hidden sm:left-12 h-fit lg:h-4/6 lg:w-4/6 lg:left-48"></div>
+
+        
+        <!-- div that contains all rendered pokemon -->
+        <main id="pokemon-rendered-el" class="pointer-events-none max-h-screen overflow-y-visible sm:max-w-screen-max"></main>
+       
+       
+       
+
+        
+        <script src="asset/js/index.js" async defer></script>
+    </body>
+</html>
